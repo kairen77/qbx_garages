@@ -1,0 +1,31 @@
+{
+    "pillboxgarage": {
+        "blipSprite": 357,
+        "spawn": {
+            "x": 233.57553100585936,
+            "y": -787.9797973632813,
+            "z": 30.61658477783203,
+            "w": 165.69708251953126
+        },
+        "label": "Pillbox Garage Parking",
+        "blipEnabled": true,
+        "type": "public",
+        "vehicleType": "car",
+        "name": "pillboxgarage",
+        "blipColor": 3,
+        "distance": 15,
+        "dropPoint": {
+            "x": 233.57553100585936,
+            "y": -787.9797973632813,
+            "z": 30.61658477783203
+        },
+        "interaction": {
+            "x": 233.57553100585936,
+            "y": -787.9797973632813,
+            "z": 30.61658477783203,
+            "w": 165.69708251953126
+        },
+        "drawMarker": true,
+        "shared": false
+    }
+}

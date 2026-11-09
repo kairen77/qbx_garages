@@ -1,0 +1,36 @@
+{
+    "error": {
+        "no_space": "Area parkir terhalang oleh kendaraan lain.",
+        "no_access": "Anda tidak memiliki akses ke garasi ini.",
+        "no_vehicles": "Anda tidak memiliki kendaraan di lokasi ini...",
+        "not_impound": "Kendaraan Anda tidak berada di impound.",
+        "not_owned": "Kendaraan ini tidak dapat disimpan di garasi.",
+        "not_correct_type": "Anda tidak dapat menyimpan tipe kendaraan ini di sini.",
+        "not_enough": "Uang Anda tidak mencukupi.",
+        "vehicle_occupied": "Kendaraan tidak boleh ada penumpang saat disimpan.",
+        "in_vehicle": "Anda sedang berada di dalam kendaraan...",
+        "spawn_failed": "Terjadi kesalahan saat mengeluarkan kendaraan.",
+        "spawn_in_progress": "Harap tunggu, kendaraan sedang dikeluarkan..."
+    },
+    "success": {
+        "vehicle_parked": "Kendaraan Berhasil Disimpan"
+    },
+    "menu": {
+        "information": "Informasi Kendaraan",
+        "description": "Nama: %s\nPlat: %s\nBiaya Impound: $%s",
+        "body": "Bodi",
+        "engine": "Mesin",
+        "fuel": "Bahan Bakar",
+        "take_out": "Keluarkan Kendaraan",
+        "veh_impounded": "Kendaraan Anda disita / impound oleh Kepolisian"
+    },
+    "info": {
+        "car_e": "[E] - Buka Garasi",
+        "park_e": "[E] - Simpan Kendaraan",
+        "impound_e": "[E] - Buka Impound",
+        "car_radial": "Garasi",
+        "park_radial": "Parkir",
+        "impound_radial": "Impound"
+    }
+}
+
