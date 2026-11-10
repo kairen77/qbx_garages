@@ -24,12 +24,12 @@ import FlagIcon from './FlagIcon';
 import { fetchNui } from '../utils/nui';
 import { useLanguage } from '../locales';
 
-export default function AdminManager({ garages = {}, onClose, onRefresh }) {
+export default function AdminManager({ garages = {}, onClose, onRefresh, initialCreate = false }) {
   const { lang, setLang, t, languages } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [editingGarage, setEditingGarage] = useState(null);
-  const [isCreating, setIsCreating] = useState(false);
+  const [isCreating, setIsCreating] = useState(initialCreate);
   const [deleteTarget, setDeleteTarget] = useState(null);
   const [isDeleting, setIsDeleting] = useState(false);
   const [langOpen, setLangOpen] = useState(false);

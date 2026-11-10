@@ -159,7 +159,12 @@ const MOCK_PLAYER_GARAGE = {
 
 export default function App() {
   const inBrowser = isEnvBrowser();
-  const [view, setView] = useState(inBrowser ? 'player' : null);
+  const searchParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
+  const isTransparent = searchParams?.get('transparent') === 'true';
+  const paramPreview = searchParams?.get('preview');
+
+  const initialView = paramPreview ? (paramPreview === 'create' ? 'admin' : paramPreview) : (inBrowser ? 'player' : null);
+  const [view, setView] = useState(initialView);
   const [garageData, setGarageData] = useState(inBrowser ? MOCK_PLAYER_GARAGE : null);
   const [adminGarages, setAdminGarages] = useState(inBrowser ? MOCK_ADMIN_GARAGES : {});
 
@@ -197,15 +202,16 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (inBrowser) {
+    if (inBrowser && !isTransparent) {
       document.body.style.backgroundImage = `url(${bgImage})`;
       document.body.style.backgroundSize = 'cover';
       document.body.style.backgroundPosition = 'center';
       document.body.style.backgroundRepeat = 'no-repeat';
     } else {
       document.body.style.background = 'transparent';
+      document.body.style.backgroundImage = 'none';
     }
-  }, [inBrowser]);
+  }, [inBrowser, isTransparent]);
 
   const handleClose = () => {
     if (!inBrowser) {
@@ -229,7 +235,8 @@ export default function App() {
           ? {
             width: '100vw',
             height: '100vh',
-            backgroundImage: `url(${bgImage})`,
+            backgroundImage: isTransparent ? 'none' : `url(${bgImage})`,
+            background: isTransparent ? 'transparent' : undefined,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -242,7 +249,7 @@ export default function App() {
       }
     >
 
-      {inBrowser && (
+      {inBrowser && !isTransparent && (
         <div
           style={{
             position: 'fixed',
@@ -323,6 +330,7 @@ export default function App() {
           garages={adminGarages}
           onClose={handleClose}
           onRefresh={handleRefreshAdmin}
+          initialCreate={paramPreview === 'create'}
         />
       )}
     </div>
