@@ -9,21 +9,21 @@ Advanced, high-performance garage and vehicle management system for **Qbox Frame
 ### 🚗 Modern Player Garage Interface
 Compact, sleek vertical UI featuring vehicle CDN thumbnails, smart priority sorting, live telemetry stats, and one-click actions.
 
-![Player Garage Preview](assets/preview-player-garage.png)
+![Player Garage Preview](github/preview-player-garage.png)
 
 ---
 
 ### 🛠️ In-Game Real-Time Admin Manager (`/admingarage`)
 Comprehensive server management dashboard with metrics overview, quick teleportation, live filters, and multi-language switcher.
 
-![Admin Garage Manager Preview](assets/preview-admin-garage.png)
+![Admin Garage Manager Preview](github/preview-admin-garage.png)
 
 ---
 
 ### 📍 Visual Garage Creation & GPS Setup Modal
 Interactive modal supporting 1-point combined or 2-point separate spawn/park coordinates, live in-game capture, blip styling, and ground ring markers.
 
-![Create New Garage Preview](assets/preview-create-garage.png)
+![Create New Garage Preview](github/preview-create-garage.png)
 
 ---
 
