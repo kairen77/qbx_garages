@@ -19,10 +19,11 @@ export default function PlayerGarage({
   garageInfo = {}, 
   vehicles = [], 
   accessPointIndex = 1,
+  initialExpandedId = null,
   onClose 
 }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [expandedId, setExpandedId] = useState(null);
+  const [expandedId, setExpandedId] = useState(initialExpandedId);
   const [isSpawning, setIsSpawning] = useState(false);
   const [imgErrors, setImgErrors] = useState({});
 

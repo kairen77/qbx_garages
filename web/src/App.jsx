@@ -162,6 +162,7 @@ export default function App() {
   const searchParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
   const isTransparent = searchParams?.get('transparent') === 'true';
   const paramPreview = searchParams?.get('preview');
+  const shouldExpandFirst = searchParams?.get('expand') === 'true' || paramPreview === 'player';
 
   const initialView = paramPreview ? (paramPreview === 'create' ? 'admin' : paramPreview) : (inBrowser ? 'player' : null);
   const [view, setView] = useState(initialView);
@@ -321,6 +322,7 @@ export default function App() {
           garageInfo={garageData.garageInfo}
           vehicles={garageData.vehicles}
           accessPointIndex={garageData.accessPointIndex}
+          initialExpandedId={shouldExpandFirst ? (garageData.vehicles?.[0]?.id || 101) : null}
           onClose={handleClose}
         />
       )}
